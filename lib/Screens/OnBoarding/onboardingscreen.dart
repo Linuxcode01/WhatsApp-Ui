@@ -17,17 +17,16 @@ class OnBoardingScreen extends StatelessWidget{
             UiHelper.CustomText(text: "Welcome to WhatsApp", height: 18, color: Colors.green ),
             SizedBox(height: 20,),
 
-              Row(children: [
+            Row(children: [
                 UiHelper.CustomText(text: "Read out", height: 14),
                 UiHelper.CustomText(text: " Privacy and Policy.", height: 14, color: Colors.blue),
                 UiHelper.CustomText(text: 'Tap "Agree and continue" ', height: 14),
-              ],),
+            ],),
 
             Row(children: [
                 UiHelper.CustomText(text: ' to accept the', height: 14),
                 UiHelper.CustomText(text: ' Teams of Service.', height: 14, color: Colors.blue),
               ],),
-
           ],
         ),
       ),
