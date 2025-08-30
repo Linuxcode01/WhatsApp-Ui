@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../Widgets/UiHelper.dart';
+import '../profile/profilescreen.dart';
 
 class OptScreen extends StatelessWidget {
   String phonenumber;
@@ -84,7 +85,9 @@ class OptScreen extends StatelessWidget {
           ],
         ),
       ),
-      floatingActionButton: UiHelper.CustomButtom(callback: (){}, buttonname: "Next"),
+      floatingActionButton: UiHelper.CustomButtom(callback: (){
+        Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=> ProfileScreen()));
+      }, buttonname: "Next"),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
   }
