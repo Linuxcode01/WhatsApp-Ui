@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:wathsapp_clone/Screens/Home%20Screen/homescreen.dart';
 
 import '../Widgets/UiHelper.dart';
 
@@ -14,6 +15,7 @@ class ProfileScreen extends StatefulWidget {
 class _ProfileScreenState extends State<ProfileScreen> {
   File? pickedImage;
   TextEditingController nameController = TextEditingController();
+
 
   @override
   Widget build(BuildContext context) {
@@ -89,7 +91,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
         ),
       ),
       floatingActionButton: UiHelper.CustomButtom(
-        callback: () {},
+        callback: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context) => HomeScreen()));
+        },
         buttonname: "Next",
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
